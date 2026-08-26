@@ -28,9 +28,11 @@ class GtmAiCli < Formula
                "gtm-macos-x64"
              end
     bin.install binary => "gtm"
+    bin.install binary => "zoominfo"
   end
 
   test do
     system "#{bin}/gtm", "--version"
+    system "#{bin}/zoominfo", "--version"
   end
 end
