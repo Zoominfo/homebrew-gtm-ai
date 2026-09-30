@@ -1,22 +1,22 @@
 class GtmAiCli < Formula
   desc "ZoomInfo CLI for searching people, companies, and more"
   homepage "https://github.com/Zoominfo/gtm-ai-cli"
-  version "1.1.0"
+  version "2.0.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/Zoominfo/gtm-ai-cli/releases/download/v#{version}/gtm-macos-arm64"
-      sha256 "355390c11fc6530acae15a4b7ad823b1382c2eba82a5a09b9bc1a577a3d40533"
+      sha256 "5e1ae1501bdeafba53abd62ffe14851e43c642abcbcb8db4368a88bb2b704b92"
     else
       url "https://github.com/Zoominfo/gtm-ai-cli/releases/download/v#{version}/gtm-macos-x64"
-      sha256 "bb4fbdb637820e87713995e4f5927723d9475020648478f08a4616f6cab1e936"
+      sha256 "dd6c83db05fc2015362a53f40fbb347a10c5e203cb0439c61f714b31023a8bfb"
     end
   end
 
   on_linux do
     url "https://github.com/Zoominfo/gtm-ai-cli/releases/download/v#{version}/gtm-linux-x64"
-    sha256 "3fe5e01c75c11f12e5f572add6a88f52ba49215930b394137c30fa2b43202f5e"
+    sha256 "dc3f9d3226f84050cd5bc6690c669c3c6f3e9ffe7d61a56ca190b8ac41d4f1a9"
   end
 
   def install
@@ -28,7 +28,6 @@ class GtmAiCli < Formula
                "gtm-macos-x64"
              end
     bin.install binary => "gtm"
-    bin.install_symlink "gtm" => "zoominfo"
   end
 
   test do
