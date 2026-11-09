@@ -1,22 +1,22 @@
 class GtmAiCli < Formula
   desc "ZoomInfo CLI for searching people, companies, and more"
   homepage "https://github.com/Zoominfo/gtm-ai-cli"
-  version "2.2.1"
+  version "2.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/Zoominfo/gtm-ai-cli/releases/download/v#{version}/gtm-macos-arm64"
-      sha256 "85e59c2c31247735e826a6bce8c9b02f2096683505799f446293f118a5f86055"
+      sha256 "241ecff85b5ed690521a6a903d4523258a56baaa5a97f0efd23b4fcebbc4c372"
     else
       url "https://github.com/Zoominfo/gtm-ai-cli/releases/download/v#{version}/gtm-macos-x64"
-      sha256 "ef9264638439f79a3df0716c595c4cab1b24f37602d6df850b3a2ef80a37bf5c"
+      sha256 "2c4bd60f97f31076f0547f6b139bcc3024b8eaedc500f86a49402db9b83416f0"
     end
   end
 
   on_linux do
     url "https://github.com/Zoominfo/gtm-ai-cli/releases/download/v#{version}/gtm-linux-x64"
-    sha256 "3cd9be423c2d5e71ce34d6a8f4b6ea83dfe3fa2eebaaab0112a274ba88284077"
+    sha256 "68671e01ae97e0c1e9213964b58e56bd633db42bd58208a7e1aee7ffa3a9f627"
   end
 
   def install
